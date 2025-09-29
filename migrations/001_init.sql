@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS games (
+    id TEXT PRIMARY KEY,
+    board TEXT NOT NULL,
+    turn TEXT NOT NULL,
+    last_move TEXT,
+    must_continue TEXT,
+    halfmove INTEGER NOT NULL DEFAULT 0,
+    history TEXT NOT NULL,
+    winner TEXT,
+    draw INTEGER NOT NULL DEFAULT 0,
+    name_red TEXT,
+    name_black TEXT,
+    email_red TEXT,
+    email_black TEXT,
+    cap_red TEXT,
+    cap_black TEXT,
+    reminder_sent INTEGER NOT NULL DEFAULT 0,
+    move_count INTEGER NOT NULL DEFAULT 0,
+    mode TEXT NOT NULL DEFAULT 'shared',
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL,
+    completed_at INTEGER
+);
